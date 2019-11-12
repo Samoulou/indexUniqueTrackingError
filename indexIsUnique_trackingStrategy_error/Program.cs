@@ -61,19 +61,19 @@ namespace indexIsUnique_trackingStrategy_error
             public Guid ProductId
             {
                 get => _productId;
-                set => _productId = value;
+                set => SetWithNotify(ref _productId, value);
             }
 
             public string Name
             {
                 get => _name;
-                set => _name = value;
+                set => SetWithNotify(ref _name, value);
             }
 
             public int BarCode
             {
                 get => _barCode;
-                set => _barCode = value;
+                set => SetWithNotify(ref _barCode, value);
             }
         }
     }
